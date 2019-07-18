@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+  <title>Alphabet des Pokémons</title>
+  <meta name="keywords" content="alphabet francais pokemon">
+  <meta name="description" content="Jeu pour apprendre l'alphabet avec les pokemons.">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+<header class="header">
+    <div class="nav-wrapper">
+        <div><a href="index.html"><img class="navlogo" src="img/logo.png"></a></div>
+        <nav class="nav">
+            <div class="menu-item"><a href="noms.html">Noms</a></div>
+            <div class="menu-item"><a href="lettres.html">Lettres</a></div>
+            <div class="menu-item"><a href="images.html">Images</a></div>
+
+        </nav>
+         <div id='toggle-box' onclick="toggle()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <p id='listeLettres'></p>
+    <p><button class='shuffle' onclick='shuffle()'>Une autre !</button></p>
+  </div>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <p><span class="footer__text">Antoine FSG 2018</span></p>
+    </div>
+  </footer>
+  <script src="js/nom.js"></script>
+  <script src="js/toggle.js"></script>
+</body>
+</html>
