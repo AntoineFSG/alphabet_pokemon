@@ -2,23 +2,29 @@ function shuffle(){
 
 var nom = ['Arko','Bradibou','Cosmog','Darkrai','Evoli','Feunnec','Germignon','Hippodocus','Iguolta','Judocrack','Kabuto','Lunala','Macogneur','N\351crosma','Otaquin','Picachu','Qulbutoquet','Rocaillou','Sorb\351b\351','Tutafeh','Ursaring','Vip\351lierre','Wattouat','Xatu','Yveltal','Zygarde'];
 
-var str = "<div class='flex-ul'>";
 
 var randomNumber = Math.floor(Math.random() * 26);
 var randomNom = nom[randomNumber];
 
 console.log(randomNom);
-
-  str +="<div class='flip-container'>";
-  str +="<div class='card' id='"+ randomNom +"''>";
-  str +="<div class='front face'>";
-  str +="<div class='full-face'><p class='big'>"+ randomNom.charAt(0) +"</p></div>";
-  str +="</div>";
-  str +="<div class='back face' id='back'>";
-  str +="<div class='left-side'><p>"+ randomNom +"</p></div>";
-  str +="<div class='img-container'><img class='liste-img' src='img/back/"+ randomNom.charAt(0) +".jpg'></div>";
-  str += "</div></div></div>"
-  str += '</div>';
+var str =`<div class='flex-ul'>
+                    <div class='flip-container'>
+                      <div class='card' id='${randomNom}'>
+                        <div class='front face'>
+                            <div class='full-face'>
+                                <p class='big'>${randomNom.charAt(0)}</p>
+                            </div>
+                        </div>
+                        <div class='back face' id='back'>
+                            <div class='left-side'>
+                                <p>${randomNom}</p>
+                            </div>
+                            <div class='img-container'>
+                                <img class='liste-img' rel='preload' as='image' src='img/back/${randomNom.charAt(0)}.jpg'>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
 
 
 document.getElementById("listeLettres").innerHTML = str;
@@ -33,8 +39,6 @@ card.forEach(function(cards) {
 cards.removeEventListener("click",cards);
 });
 };
-
-shuffle();
 
 
 
