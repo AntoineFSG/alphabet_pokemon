@@ -40,7 +40,6 @@ cards.removeEventListener("click",cards);
 });
 };
 
-shuffle();
 
 
 
